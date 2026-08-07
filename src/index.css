@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800;900&display=swap');
+
+:root {
+  --bg-cream: #FDF6E3;
+  --color-coral: #F0506E;
+  --color-mint: #2FD9A0;
+  --color-gold: #F5B942;
+  --color-blue: #2E6BB3;
+  --color-purple: #8B6FE8;
+  --color-dark: #1A1A1A;
+  --color-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-cream) !important;
+  color: var(--color-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.bg-cream { background-color: var(--bg-cream) !important; }
+.bg-coral { background-color: var(--color-coral) !important; }
+.bg-mint { background-color: var(--color-mint) !important; }
+.bg-amber { background-color: var(--color-gold) !important; }
+.bg-purple { background-color: var(--color-purple) !important; }
+
+/* Neo-Brutalist Card & Button Tokens */
+.nb-card {
+  background-color: var(--color-white);
+  border: 3.5px solid var(--color-dark) !important;
+  border-radius: 20px !important;
+  box-shadow: 6px 6px 0px var(--color-dark) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nb-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0px var(--color-dark) !important;
+}
+
+.nb-card-static {
+  background-color: var(--color-white);
+  border: 3.5px solid var(--color-dark) !important;
+  border-radius: 20px !important;
+  box-shadow: 4px 4px 0px var(--color-dark) !important;
+}
+
+.nb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 12px 26px;
+  border-radius: 9999px !important;
+  border: 3.5px solid var(--color-dark) !important;
+  box-shadow: 5px 5px 0px var(--color-dark) !important;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  text-decoration: none !important;
+}
+
+.nb-button:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--color-dark) !important;
+}
+
+.nb-button-dark {
+  background-color: var(--color-dark) !important;
+  color: var(--color-white) !important;
+}
+
+.nb-button-coral {
+  background-color: var(--color-coral) !important;
+  color: var(--color-white) !important;
+}
+
+.nb-button-mint {
+  background-color: var(--color-mint) !important;
+  color: var(--color-dark) !important;
+}
+
+.nb-button-gold {
+  background-color: var(--color-gold) !important;
+  color: var(--color-dark) !important;
+}
+
+.nb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px !important;
+  border: 2.5px solid var(--color-dark) !important;
+  box-shadow: 3px 3px 0px var(--color-dark) !important;
+  font-weight: 800;
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
