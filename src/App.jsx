@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import TeacherLoginModal from './components/TeacherLoginModal';
 import HistoryModal from './components/HistoryModal';
 import ClassroomQuizHost from './components/ClassroomQuizHost';
+import InstallPwaBanner from './components/InstallPwaBanner';
 import { INITIAL_USER_STATS, INITIAL_LEADERBOARD, SAMPLE_TEACHER_QUIZZES } from './data/mockData';
 
 export default function App() {
@@ -167,6 +168,8 @@ export default function App() {
         onClose={() => setIsHistoryModalOpen(false)}
         historySessions={historySessions}
       />
+
+      <InstallPwaBanner />
     </div>
   );
 }
